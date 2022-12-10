@@ -1,0 +1,33 @@
+print ("Welcome to Treasure Island.")
+print ("Your mission is to find the treasure.")
+#Write your code below this line
+print("There is a big whole around.")
+hole = input ("Left or Right? ")
+hole_lower = hole.lower ()
+if (hole_lower == "right"):
+  print ('You fell into a hole, Gameover!!!')
+else:
+ swim_wait = input ("Swim or Wait? ")
+ swim_wait_lower = swim_wait.lower ()
+if(swim_wait_lower == "swim"):
+ print ("ooops, Attacked by trout, Gameover!!!")
+else:
+ print ("Which door?")
+door = input ("Red, Blue, Yellow? ")
+door_lower = door.lower ()
+if (door_lower =="Red"):
+ print("Burned by fire, Gameover!!!")
+elif (door_lower == "Blue"):
+ print("Eaten by beasts, Gameover!!!")
+elif(door_lower =="Yellow"):
+ print ("You Win!!!")
+else:
+ print ("Gameover")
+start = input ("start again or end? ")
+start_lower = start_lower ()
+if(start_lower == "start"):
+ print("There is a big whole around")
+ hole = input ("Left or Right? ")
+ hole_lower = hole.lower ()
+else:
+ print ("Game ends!!!")
