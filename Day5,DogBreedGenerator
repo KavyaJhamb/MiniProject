@@ -1,0 +1,32 @@
+import random
+import time as t
+
+endProgram =""
+
+print()
+print("This program asks a user what size of dog they would like, and returns the name of a breed in that size range")
+print()
+
+while endProgram. lower() != "quit":
+   t.sleep (.6)
+   dog_dict ={"smol":["Havanese", "Terrier", "Chihuaha", "Mini Poodle"],"medium": ["Beagle", "Cocker", "Labrador"],"thicc": ["Dalmation","Great Dane","Husky"]}
+   data_valid = False
+ 
+   while data_valid == False:
+     print()
+     print()
+     user_input = input( "What sized dog would you like an example of?(type 'smol', 'medium', or 'thicc'):\n")
+     if user_input.lower() == 'smol' or user_input.lower() == 'medium' or user_input.lower() == 'thicc':
+       data_valid = True
+     else:
+      print( "Invalid entry, please type 'smol','medium', or 'thicc'")
+      data_valid = False
+     key = user_input.lower()
+     index = random.randint(0, len(dog_dict[key])-1)
+     print()
+     t.sleep(.5)
+     print("Example of a breed in that size range: ", dog_dict[key][ index],"\n" )
+     t.sleep(1)
+     endProgram = input( "Would you like to try again? Press enter to continue or type 'quit' to quit.\n")
+print()
+print( "Peace out")
